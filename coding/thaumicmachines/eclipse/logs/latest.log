@@ -1,0 +1,28 @@
+[14:37:33] [main/INFO]: Setting user: Player30
+[14:37:35] [Client thread/INFO]: LWJGL Version: 2.9.1
+[14:37:35] [Client thread/ERROR]: Couldn't initialize twitch stream
+[14:37:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Thaumic MAchines, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[14:37:42] [Sound Library Loader/INFO]: Sound engine started
+[14:37:43] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[14:37:43] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[14:37:44] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Thaumic MAchines, FMLFileResourcePack:Thaumcraft, FMLFileResourcePack:Baubles
+[14:37:45] [Client thread/INFO]: Created: 512x512 textures/items-atlas
+[14:37:45] [Client thread/INFO]: Created: 512x512 textures/blocks-atlas
+[14:37:46] [Sound Library Loader/INFO]: Sound engine started
+[14:37:49] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[14:37:49] [Server thread/INFO]: Generating keypair
+[14:37:50] [Server thread/INFO]: Preparing start region for level 0
+[14:37:51] [Server thread/INFO]: Changing view distance to 12, from 10
+[14:37:51] [Server thread/INFO]: Player30[local:E:36a2c8f7] logged in with entity id 326 at (-538.1771513250993, 4.515065749408402, 44.13322363469163)
+[14:37:51] [Server thread/INFO]: Player30 joined the game
+[14:37:53] [Server thread/INFO]: Saving and pausing game...
+[14:37:53] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:37:53] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:37:53] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:37:53] [Server thread/INFO]: Saving chunks for level 'New World'/The Outer Lands
+[14:37:54] [Server thread/INFO]: Saving and pausing game...
+[14:37:54] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:37:54] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:37:54] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:37:54] [Server thread/INFO]: Saving chunks for level 'New World'/The Outer Lands
+[14:46:14] [Client thread/INFO]: [CHAT] §5§oA sudden and unnatural hunger consumes you.

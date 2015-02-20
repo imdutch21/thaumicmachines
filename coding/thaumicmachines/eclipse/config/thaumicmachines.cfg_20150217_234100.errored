@@ -1,0 +1,1011 @@
+# Configuration file
+
+ {
+
+    essentiavaporizer {
+        # This sets the base range of effect. Default 5
+        I:"Base range"=5
+
+        # Enable the crafting of the EssentiaVaporizer. Default: true
+        B:"Enable Essentia Vaporizer"=true
+
+        # Enable the crafting of the Power upgrade. Default: true
+        B:"Enable upgrade"=true
+
+        # Set the amount each power upgrade will add (.5 will add 1/2). Default: .5
+        D:"Upgrading power"=2
+    }
+
+}
+
+
+air {
+    # Sets the base amount of time between each time the AIR applies an effect. Default 10
+    I:"Base refresh time AIR"=10
+
+    # Sets the base power for the effects AIR gives. Default 1
+    I:"Base strength AIR"=1
+
+    # Sets the base time effects will last that AIR gives. Default 20
+    I:"Base time AIR"=20
+
+    # Sets the base amount of time (by default 1) AIR essentia gives you. Default 100
+    I:"Base uses AIR"=100
+
+    # Enable effect for AIR. Default: true
+    B:"Effect AIR"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost AIR"=0
+}
+
+
+armor {
+    # Sets the base amount of time between each time the ARMOR applies an effect. Default 10
+    I:"Base refresh time ARMOR"=10
+
+    # Sets the base power for the effects ARMOR gives. Default 1
+    I:"Base strength ARMOR"=1
+
+    # Sets the base time effects will last that ARMOR gives. Default 20
+    I:"Base time ARMOR"=20
+
+    # Sets the base amount of time (by default 1) ARMOR essentia gives you. Default 100
+    I:"Base uses ARMOR"=100
+
+    # Enable effect for ARMOR. Default: true //does nothing for now
+    B:"Effect ARMOR"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost ARMOR"=0
+}
+
+
+aura {
+    # Sets the base amount of time between each time the AURA applies an effect. Default 10
+    I:"Base refresh time AURA"=10
+
+    # Sets the base power for the effects AURA gives. Default 1
+    I:"Base strength AURA"=1
+
+    # Sets the base time effects will last that AURA gives. Default 20
+    I:"Base time AURA"=20
+
+    # Sets the base amount of time (by default 1) AURA essentia gives you. Default 100
+    I:"Base uses AURA"=100
+
+    # Enable effect for AURA. Default: true //does nothing for now
+    B:"Effect AURA"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost AURA"=0
+}
+
+
+beast {
+    # Sets the base amount of time between each time the BEAST applies an effect. Default 10
+    I:"Base refresh time BEAST"=10
+
+    # Sets the base power for the effects BEAST gives. Default 1
+    I:"Base strength BEAST"=1
+
+    # Sets the base time effects will last that BEAST gives. Default 20
+    I:"Base time BEAST"=20
+
+    # Sets the base amount of time (by default 1) BEAST essentia gives you. Default 100
+    I:"Base uses BEAST"=100
+
+    # Enable effect for BEAST. Default: true //does nothing for now
+    B:"Effect BEAST"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost BEAST"=0
+}
+
+
+cloth {
+    # Sets the base amount of time between each time the CLOTH applies an effect. Default 10
+    I:"Base refresh time CLOTH"=10
+
+    # Sets the base power for the effects CLOTH gives. Default 1
+    I:"Base strength CLOTH"=1
+
+    # Sets the base time effects will last that CLOTH gives. Default 20
+    I:"Base time CLOTH"=20
+
+    # Sets the base amount of time (by default 1) CLOTH essentia gives you. Default 100
+    I:"Base uses CLOTH"=100
+
+    # Enable effect for CLOTH. Default: true //does nothing for now
+    B:"Effect CLOTH"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost CLOTH"=0
+}
+
+
+cold {
+    # Sets the base amount of time between each time the COLD applies an effect. Default 10
+    I:"Base refresh time COLD"=10
+
+    # Sets the base power for the effects COLD gives. Default 1
+    I:"Base strength COLD"=1
+
+    # Sets the base time effects will last that COLD gives. Default 20
+    I:"Base time COLD"=20
+
+    # Sets the base amount of time (by default 1) COLD essentia gives you. Default 100
+    I:"Base uses COLD"=100
+
+    # Enable effect for COLD. Default: true //does nothing for now
+    B:"Effect COLD"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost COLD"=0
+}
+
+
+craft {
+    # Sets the base amount of time between each time the CRAFT applies an effect. Default 10
+    I:"Base refresh time CRAFT"=10
+
+    # Sets the base power for the effects CRAFT gives. Default 1
+    I:"Base strength CRAFT"=1
+
+    # Sets the base time effects will last that CRAFT gives. Default 20
+    I:"Base time CRAFT"=20
+
+    # Sets the base amount of time (by default 1) CRAFT essentia gives you. Default 100
+    I:"Base uses CRAFT"=100
+
+    # Enable effect for CRAFT. Default: true //does nothing for now
+    B:"Effect CRAFT"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost CRAFT"=0
+}
+
+
+crop {
+    # Sets the base amount of time between each time the CROP applies an effect. Default 10
+    I:"Base refresh time CROP"=10
+
+    # Sets the base power for the effects CROP gives. Default 1
+    I:"Base strength CROP"=1
+
+    # Sets the base time effects will last that CROP gives. Default 20
+    I:"Base time CROP"=20
+
+    # Sets the base amount of time (by default 1) CROP essentia gives you. Default 100
+    I:"Base uses CROP"=100
+
+    # Enable effect for CROP. Default: true //does nothing for now
+    B:"Effect CROP"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost CROP"=0
+}
+
+
+crystal {
+    # Sets the base amount of time between each time the CRYSTAL applies an effect. Default 10
+    I:"Base refresh time CRYSTAL"=10
+
+    # Sets the base power for the effects CRYSTAL gives. Default 1
+    I:"Base strength CRYSTAL"=1
+
+    # Sets the base time effects will last that CRYSTAL gives. Default 20
+    I:"Base time CRYSTAL"=20
+
+    # Sets the base amount of time (by default 1) CRYSTAL essentia gives you. Default 100
+    I:"Base uses CRYSTAL"=100
+
+    # Enable effect for CRYSTAL. Default: true //does nothing for now
+    B:"Effect CRYSTAL"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost CRYSTAL"=0
+}
+
+
+darkness {
+    # Sets the base amount of time between each time the DARKNESS applies an effect. Default 20
+    I:"Base refresh time DARKNESS"=10
+
+    # Sets the base power for the effects DARKNESS gives. Default 6
+    I:"Base strength DARKNESS"=1
+
+    # Sets the base time effects will last that DARKNESS gives. Default 40
+    I:"Base time DARKNESS"=20
+
+    # Sets the base amount of time (by default 1) DARKNESS essentia gives you. Default 200
+    I:"Base uses DARKNESS"=100
+
+    # Enable effect for DARKNESS. Default: true
+    B:"Effect DARKNESS"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost DARKNESS"=0
+}
+
+
+death {
+    # Sets the base amount of time between each time the DEATH applies an effect. Default 10
+    I:"Base refresh time DEATH"=10
+
+    # Sets the base power for the effects DEATH gives. Default 1
+    I:"Base strength DEATH"=1
+
+    # Sets the base time effects will last that DEATH gives. Default 20
+    I:"Base time DEATH"=20
+
+    # Sets the base amount of time (by default 1) DEATH essentia gives you. Default 100
+    I:"Base uses DEATH"=100
+
+    # Enable effect for DEATH. Default: true //does nothing for now
+    B:"Effect DEATH"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost DEATH"=0
+}
+
+
+earth {
+    # Sets the base amount of time between each time the EARTH applies an effect. Default 10
+    I:"Base refresh time EARTH"=10
+
+    # Sets the base power for the effects EARTH gives. Default 1
+    I:"Base strength EARTH"=1
+
+    # Sets the base power for the effects TRAP gives. Default 1
+    I:"Base strength TRAP"=1
+
+    # Sets the base time effects will last that EARTH gives. Default 20
+    I:"Base time EARTH"=20
+
+    # Sets the base amount of time (by default 1) EARTH essentia gives you. Default 100
+    I:"Base uses EARTH"=100
+
+    # Enable effect for EARTH. Default: true //does nothing for now
+    B:"Effect EARTH"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost EARTH"=0
+}
+
+
+eldritch {
+    # Sets the base amount of time between each time the ELDRITCH applies an effect. Default 10
+    I:"Base refresh time ELDRITCH"=10
+
+    # Sets the base power for the effects ELDRITCH gives. Default 1
+    I:"Base strength ELDRITCH"=1
+
+    # Sets the base time effects will last that ELDRITCH gives. Default 20
+    I:"Base time ELDRITCH"=20
+
+    # Sets the base amount of time (by default 1) ELDRITCH essentia gives you. Default 100
+    I:"Base uses ELDRITCH"=100
+
+    # Enable effect for ELDRITCH. Default: true //does nothing for now
+    B:"Effect ELDRITCH"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost ELDRITCH"=0
+}
+
+
+energy {
+    # Sets the base amount of time between each time the ENERGY applies an effect. Default 10
+    I:"Base refresh time ENERGY"=10
+
+    # Sets the base power for the effects ENERGY gives. Default 1
+    I:"Base strength ENERGY"=1
+
+    # Sets the base time effects will last that ENERGY gives. Default 15
+    I:"Base time ENERGY"=20
+
+    # Sets the base amount of time (by default 1) ENERGY essentia gives you. Default 180
+    I:"Base uses ENERGY"=100
+
+    # Enable effect for ENERGY. Default: true
+    B:"Effect ENERGY"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost ENERGY"=0
+}
+
+
+entropy {
+    # Sets the base amount of time between each time the ENTROPY applies an effect. Default 10
+    I:"Base refresh time ENTROPY"=10
+
+    # Sets the base power for the effects ENTROPY gives. Default 0 //not used
+    I:"Base strength ENTROPY"=1
+
+    # Sets the base time effects will last that ENTROPY gives. Default 0 //not used
+    I:"Base time ENTROPY"=20
+
+    # Sets the base amount of time (by default 1) ENTROPY essentia gives you. Default 10
+    I:"Base uses ENTROPY"=100
+
+    # Enable effect for ENTROPY. Default: true
+    B:"Effect ENTROPY"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost ENTROPY"=0
+}
+
+
+exchange {
+    # Sets the base amount of time between each time the EXCHANGE applies an effect. Default 10
+    I:"Base refresh time EXCHANGE"=10
+
+    # Sets the base power for the effects EXCHANGE gives. Default 1
+    I:"Base strength EXCHANGE"=1
+
+    # Sets the base time effects will last that EXCHANGE gives. Default 20
+    I:"Base time EXCHANGE"=20
+
+    # Sets the base amount of time (by default 1) EXCHANGE essentia gives you. Default 100
+    I:"Base uses EXCHANGE"=100
+
+    # Enable effect for EXCHANGE. Default: true //does nothing for now
+    B:"Effect EXCHANGE"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost EXCHANGE"=0
+}
+
+
+fire {
+    # Sets the base amount of time between each time the FIRE applies an effect. Default 10
+    I:"Base refresh time FIRE"=10
+
+    # Sets the base power for the effects FIRE gives. Default 0 //not used
+    I:"Base strength FIRE"=1
+
+    # Sets the base time effects will last that FIRE gives. Default 20
+    I:"Base time FIRE"=20
+
+    # Sets the base amount of time (by default 1) FIRE essentia gives you. Default 6
+    I:"Base uses FIRE"=100
+
+    # Enable effect for FIRE. Default: true
+    B:"Effect FIRE"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost FIRE"=0
+}
+
+
+flight {
+    # Sets the base amount of time between each time the FLIGHT applies an effect. Default 200
+    I:"Base refresh time FLIGHT"=10
+
+    # Sets the base power for the effects FLIGHT gives. Default 2
+    I:"Base strength FLIGHT"=1
+
+    # Sets the base time effects will last that FLIGHT gives. Default 20
+    I:"Base time FLIGHT"=20
+
+    # Sets the base amount of time (by default 1) FLIGHT essentia gives you. Default 10
+    I:"Base uses FLIGHT"=100
+
+    # Enable effect for FLIGHT. Default: true
+    B:"Effect FLIGHT"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost FLIGHT"=0
+}
+
+
+greed {
+    # Sets the base amount of time between each time the GREED applies an effect. Default 10
+    I:"Base refresh time GREED"=10
+
+    # Sets the base power for the effects GREED gives. Default 1
+    I:"Base strength GREED"=1
+
+    # Sets the base time effects will last that GREED gives. Default 20
+    I:"Base time GREED"=20
+
+    # Sets the base amount of time (by default 1) GREED essentia gives you. Default 100
+    I:"Base uses GREED"=100
+
+    # Enable effect for GREED. Default: true //does nothing for now
+    B:"Effect GREED"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost GREED"=0
+}
+
+
+harvest {
+    # Sets the base amount of time between each time the HARVEST applies an effect. Default 10
+    I:"Base refresh time HARVEST"=10
+
+    # Sets the base power for the effects HARVEST gives. Default 1
+    I:"Base strength HARVEST"=1
+
+    # Sets the base time effects will last that HARVEST gives. Default 20
+    I:"Base time HARVEST"=20
+
+    # Sets the base amount of time (by default 1) HARVEST essentia gives you. Default 100
+    I:"Base uses HARVEST"=100
+
+    # Enable effect for HARVEST. Default: true //does nothing for now
+    B:"Effect HARVEST"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost HARVEST"=0
+}
+
+
+heal {
+    # Sets the base amount of time between each time the HEAL applies an effect. Default 600
+    I:"Base refresh time HEAL"=10
+
+    # Sets the base power for the effects HEAL gives. Default 1
+    I:"Base strength HEAL"=1
+
+    # Sets the base time effects will last that HEAL gives. Default 2
+    I:"Base time HEAL"=20
+
+    # Sets the base amount of time (by default 1) HEAL essentia gives you. Default 20
+    I:"Base uses HEAL"=100
+
+    # Enable effect for HEAL. Default: true
+    B:"Effect HEAL"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost HEAL"=0
+}
+
+
+hunger {
+    # Sets the base amount of time between each time the HUNGER applies an effect. Default 10
+    I:"Base refresh time HUNGER"=10
+
+    # Sets the base power for the effects HUNGER gives. Default 1
+    I:"Base strength HUNGER"=1
+
+    # Sets the base time effects will last that HUNGER gives. Default 20
+    I:"Base time HUNGER"=20
+
+    # Sets the base amount of time (by default 1) HUNGER essentia gives you. Default 100
+    I:"Base uses HUNGER"=100
+
+    # Enable effect for HUNGER. Default: true //does nothing for now
+    B:"Effect HUNGER"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost HUNGER"=0
+}
+
+
+life {
+    # Sets the base amount of time between each time the LIFE applies an effect. Default 10
+    I:"Base refresh time LIFE"=10
+
+    # Sets the base power for the effects LIFE gives. Default 1
+    I:"Base strength LIFE"=1
+
+    # Sets the base time effects will last that LIFE gives. Default 20
+    I:"Base time LIFE"=20
+
+    # Sets the base amount of time (by default 1) LIFE essentia gives you. Default 30
+    I:"Base uses LIFE"=100
+
+    # Enable effect for LIFE. Default: true
+    B:"Effect LIFE"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost LIFE"=0
+}
+
+
+light {
+    # Sets the base amount of time between each time the LIGHT applies an effect. Default 10
+    I:"Base refresh time LIGHT"=10
+
+    # Sets the base power for the effects LIGHT gives. Default 1
+    I:"Base strength LIGHT"=1
+
+    # Sets the base time effects will last that LIGHT gives. Default 20
+    I:"Base time LIGHT"=20
+
+    # Sets the base amount of time (by default 1) LIGHT essentia gives you. Default 100
+    I:"Base uses LIGHT"=100
+
+    # Enable effect for LIGHT. Default: true //does nothing for now
+    B:"Effect LIGHT"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost LIGHT"=0
+}
+
+
+ligt {
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost WEATHER"=0
+}
+
+
+magic {
+    # Sets the base amount of time between each time the MAGIC applies an effect. Default 10
+    I:"Base refresh time MAGIC"=10
+
+    # Sets the base power for the effects MAGIC gives. Default 1
+    I:"Base strength MAGIC"=1
+
+    # Sets the base time effects will last that MAGIC gives. Default 20
+    I:"Base time MAGIC"=20
+
+    # Sets the base amount of time (by default 1) MAGIC essentia gives you. Default 100
+    I:"Base uses MAGIC"=100
+
+    # Enable effect for MAGIC. Default: true //does nothing for now
+    B:"Effect MAGIC"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost MAGIC"=0
+}
+
+
+man {
+    # Sets the base amount of time between each time the MAN applies an effect. Default 10
+    I:"Base refresh time MAN"=10
+
+    # Sets the base power for the effects MAN gives. Default 1
+    I:"Base strength MAN"=1
+
+    # Sets the base time effects will last that MAN gives. Default 20
+    I:"Base time MAN"=20
+
+    # Sets the base amount of time (by default 1) MAN essentia gives you. Default 100
+    I:"Base uses MAN"=100
+
+    # Enable effect for MAN. Default: true //does nothing for now
+    B:"Effect MAN"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost MAN"=0
+}
+
+
+mechanism {
+    # Sets the base amount of time between each time the MECHANISM applies an effect. Default 10
+    I:"Base refresh time MECHANISM"=10
+
+    # Sets the base power for the effects MECHANISM gives. Default 1
+    I:"Base strength MECHANISM"=1
+
+    # Sets the base time effects will last that MECHANISM gives. Default 20
+    I:"Base time MECHANISM"=20
+
+    # Sets the base amount of time (by default 1) MECHANISM essentia gives you. Default 100
+    I:"Base uses MECHANISM"=100
+
+    # Enable effect for MECHANISM. Default: true //does nothing for now
+    B:"Effect MECHANISM"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost MECHANISM"=0
+}
+
+
+metal {
+    # Sets the base amount of time between each time the METAL applies an effect. Default 10
+    I:"Base refresh time METAL"=10
+
+    # Sets the base power for the effects METAL gives. Default 1
+    I:"Base strength METAL"=1
+
+    # Sets the base time effects will last that METAL gives. Default 20
+    I:"Base time METAL"=20
+
+    # Sets the base amount of time (by default 1) METAL essentia gives you. Default 100
+    I:"Base uses METAL"=100
+
+    # Enable effect for METAL. Default: true //does nothing for now
+    B:"Effect METAL"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost METAL"=0
+}
+
+
+mind {
+    # Sets the base amount of time between each time the MIND applies an effect. Default 10
+    I:"Base refresh time MIND"=10
+
+    # Sets the base power for the effects MIND gives. Default 1
+    I:"Base strength MIND"=1
+
+    # Sets the base time effects will last that MIND gives. Default 20
+    I:"Base time MIND"=20
+
+    # Sets the base amount of time (by default 1) MIND essentia gives you. Default 100
+    I:"Base uses MIND"=100
+
+    # Enable effect for MIND. Default: true //does nothing for now
+    B:"Effect MIND"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost MIND"=0
+}
+
+
+mine {
+    # Sets the base amount of time between each time the MINE applies an effect. Default 10
+    I:"Base refresh time MINE"=10
+
+    # Sets the base power for the effects MINE gives. Default 1
+    I:"Base strength MINE"=1
+
+    # Sets the base time effects will last that MINE gives. Default 20
+    I:"Base time MINE"=20
+
+    # Sets the base amount of time (by default 1) MINE essentia gives you. Default 100
+    I:"Base uses MINE"=100
+
+    # Enable effect for MINE. Default: true //does nothing for now
+    B:"Effect MINE"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost MINE"=0
+}
+
+
+motion {
+    # Sets the base amount of time between each time the MOTION applies an effect. Default 10
+    I:"Base refresh time MOTION"=10
+
+    # Sets the base power for the effects MOTION gives. Default 2
+    I:"Base strength MOTION"=1
+
+    # Sets the base time effects will last that MOTION gives. Default 20
+    I:"Base time MOTION"=20
+
+    # Sets the base amount of time (by default 1) MOTION essentia gives you. Default 250
+    I:"Base uses MOTION"=100
+
+    # Enable effect for MOTION. Default: true
+    B:"Effect MOTION"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost MOTION"=0
+}
+
+
+order {
+    # Sets the base amount of time between each time the ORDER applies an effect. Default 10
+    I:"Base refresh time ORDER"=10
+
+    # Sets the base power for the effects ORDER gives. Default 1
+    I:"Base strength ORDER"=1
+
+    # Sets the base time effects will last that ORDER gives. Default 20
+    I:"Base time ORDER"=20
+
+    # Sets the base amount of time (by default 1) ORDER essentia gives you. Default 100
+    I:"Base uses ORDER"=100
+
+    # Enable effect for ORDER. Default: true //does nothing for now
+    B:"Effect ORDER"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost ORDER"=0
+}
+
+
+plant {
+    # Sets the base amount of time between each time the PLANT applies an effect. Default 10
+    I:"Base refresh time PLANT"=10
+
+    # Sets the base power for the effects PLANT gives. Default 1
+    I:"Base strength PLANT"=1
+
+    # Sets the base time effects will last that PLANT gives. Default 20
+    I:"Base time PLANT"=20
+
+    # Sets the base amount of time (by default 1) PLANT essentia gives you. Default 100
+    I:"Base uses PLANT"=100
+
+    # Enable effect for PLANT. Default: true //does nothing for now
+    B:"Effect PLANT"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost PLANT"=0
+}
+
+
+poison {
+    # Sets the base amount of time between each time the POISON applies an effect. Default 100
+    I:"Base refresh time POISON"=10
+
+    # Sets the base power for the effects POISON gives. Default 1
+    I:"Base strength POISON"=1
+
+    # Sets the base time effects will last that POISON gives. Default 60
+    I:"Base time POISON"=20
+
+    # Sets the base amount of time (by default 1) POISON essentia gives you. Default 80
+    I:"Base uses POISON"=100
+
+    # Enable effect for POISON. Default: true
+    B:"Effect POISON"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost POISON"=0
+}
+
+
+senses {
+    # Sets the base amount of time between each time the SENSES applies an effect. Default 10
+    I:"Base refresh time SENSES"=10
+
+    # Sets the base power for the effects SENSES gives. Default 1
+    I:"Base strength SENSES"=1
+
+    # Sets the base time effects will last that SENSES gives. Default 20
+    I:"Base time SENSES"=20
+
+    # Sets the base amount of time (by default 1) SENSES essentia gives you. Default 100
+    I:"Base uses SENSES"=100
+
+    # Enable effect for SENSES. Default: true //does nothing for now
+    B:"Effect SENSES"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost SENSES"=0
+}
+
+
+slime {
+    # Sets the base amount of time between each time the SLIME applies an effect. Default 10
+    I:"Base refresh time SLIME"=10
+
+    # Sets the base power for the effects SLIME gives. Default 1
+    I:"Base strength SLIME"=1
+
+    # Sets the base time effects will last that SLIME gives. Default 30
+    I:"Base time SLIME"=20
+
+    # Sets the base amount of time (by default 1) SLIME essentia gives you. Default 120
+    I:"Base uses SLIME"=100
+
+    # Enable effect for SLIME. Default: true
+    B:"Effect SLIME"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost SLIME"=0
+}
+
+
+soul {
+    # Sets the base amount of time between each time the SOUL applies an effect. Default 10
+    I:"Base refresh time SOUL"=10
+
+    # Sets the base power for the effects SOUL gives. Default 1
+    I:"Base strength SOUL"=1
+
+    # Sets the base time effects will last that SOUL gives. Default 20
+    I:"Base time SOUL"=20
+
+    # Sets the base amount of time (by default 1) SOUL essentia gives you. Default 100
+    I:"Base uses SOUL"=100
+
+    # Enable effect for SOUL. Default: true //does nothing for now
+    B:"Effect SOUL"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost SOUL"=0
+}
+
+
+taint {
+    # Sets the base amount of time between each time the TAINT applies an effect. Default 10
+    I:"Base refresh time TAINT"=10
+
+    # Sets the base power for the effects TAINT gives. Default 1
+    I:"Base strength TAINT"=1
+
+    # Sets the base time effects will last that TAINT gives. Default 20
+    I:"Base time TAINT"=20
+
+    # Sets the base amount of time (by default 1) TAINT essentia gives you. Default 100
+    I:"Base uses TAINT"=100
+
+    # Enable effect for TAINT. Default: true //does nothing for now
+    B:"Effect TAINT"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost TAINT"=0
+}
+
+
+tool {
+    # Sets the base amount of time between each time the TOOL applies an effect. Default 10
+    I:"Base refresh time TOOL"=10
+
+    # Sets the base power for the effects TOOL gives. Default 1
+    I:"Base strength TOOL"=1
+
+    # Sets the base time effects will last that TOOL gives. Default 20
+    I:"Base time TOOL"=20
+
+    # Sets the base amount of time (by default 1) TOOL essentia gives you. Default 100
+    I:"Base uses TOOL"=100
+
+    # Enable effect for TOOL. Default: true //does nothing for now
+    B:"Effect TOOL"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost TOOL"=0
+}
+
+
+trap {
+    # Sets the base amount of time between each time the TRAP applies an effect. Default 10
+    I:"Base refresh time TRAP"=10
+
+    # Sets the base time effects will last that TRAP gives. Default 60
+    I:"Base time TRAP"=20
+
+    # Sets the base amount of time (by default 1) TRAP essentia gives you. Default 100
+    I:"Base uses TRAP"=100
+
+    # Enable effect for TRAP. Default: true
+    B:"Effect TRAP"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost TRAP"=0
+}
+
+
+travel {
+    # Sets the base amount of time between each time the TRAVEL applies an effect. Default 10
+    I:"Base refresh time TRAVEL"=10
+
+    # Sets the base power for the effects TRAVEL gives. Default 1
+    I:"Base strength TRAVEL"=1
+
+    # Sets the base time effects will last that TRAVEL gives. Default 20
+    I:"Base time TRAVEL"=20
+
+    # Sets the base amount of time (by default 1) TRAVEL essentia gives you. Default 100
+    I:"Base uses TRAVEL"=100
+
+    # Enable effect for TRAVEL. Default: true //does nothing for now
+    B:"Effect TRAVEL"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost TRAVEL"=0
+}
+
+
+tree {
+    # Sets the base amount of time between each time the TREE applies an effect. Default 10
+    I:"Base refresh time TREE"=10
+
+    # Sets the base power for the effects TREE gives. Default 1
+    I:"Base strength TREE"=1
+
+    # Sets the base time effects will last that TREE gives. Default 20
+    I:"Base time TREE"=20
+
+    # Sets the base amount of time (by default 1) TREE essentia gives you. Default 100
+    I:"Base uses TREE"=100
+
+    # Enable effect for TREE. Default: true //does nothing for now
+    B:"Effect TREE"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost TREE"=0
+}
+
+
+undead {
+    # Sets the base amount of time between each time the UNDEAD applies an effect. Default 10
+    I:"Base refresh time UNDEAD"=10
+
+    # Sets the base power for the effects UNDEAD gives. Default 1
+    I:"Base strength UNDEAD"=1
+
+    # Sets the base time effects will last that UNDEAD gives. Default 20
+    I:"Base time UNDEAD"=20
+
+    # Sets the base amount of time (by default 1) UNDEAD essentia gives you. Default 100
+    I:"Base uses UNDEAD"=100
+
+    # Enable effect for UNDEAD. Default: true //does nothing for now
+    B:"Effect UNDEAD"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost UNDEAD"=0
+}
+
+
+void {
+    # Sets the base amount of time between each time the VOID applies an effect. Default 10
+    I:"Base refresh time VOID"=10
+
+    # Sets the base power for the effects VOID gives. Default 1
+    I:"Base strength VOID"=1
+
+    # Sets the base time effects will last that VOID gives. Default 20
+    I:"Base time VOID"=20
+
+    # Sets the base amount of time (by default 1) VOID essentia gives you. Default 100
+    I:"Base uses VOID"=100
+
+    # Enable effect for VOID. Default: true //does nothing for now
+    B:"Effect VOID"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost VOID"=0
+}
+
+
+water {
+    # Sets the base amount of time between each time the WATER applies an effect. Default 10
+    I:"Base refresh time WATER"=10
+
+    # Sets the base power for the effects WATER gives. Default 2
+    I:"Base strength WATER"=1
+
+    # Sets the base time effects will last that WATER gives. Default 20
+    I:"Base time WATER"=20
+
+    # Sets the base amount of time (by default 1) WATER essentia gives you. Default 220
+    I:"Base uses WATER"=100
+
+    # Enable effect for WATER. Default: true
+    B:"Effect WATER"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost WATER"=0
+}
+
+
+weapon {
+    # Sets the base amount of time between each time the WEAPON applies an effect. Default 10
+    I:"Base refresh time WEAPON"=10
+
+    # Sets the base power for the effects WEAPON gives. Default 1
+    I:"Base strength WEAPON"=1
+
+    # Sets the base time effects will last that WEAPON gives. Default 20
+    I:"Base time WEAPON"=20
+
+    # Sets the base amount of time (by default 1) WEAPON essentia gives you. Default 100
+    I:"Base uses WEAPON"=100
+
+    # Enable effect for WEAPON. Default: true //does nothing for now
+    B:"Effect WEAPON"=true
+
+    # Adds this to the base range of effects (5 by default)(set - to decrease size). Default 0
+    I:"Range boost WEAPON"=0
+}
+
+
+weather {
+    # Sets the base amount of time between each time the WEATHER applies an effect. Default 600
+    I:"Base refresh time WEATHER"=10
+
+    # Sets the base power for the effects WEATHER gives. Default 0 //no use
+    I:"Base strength WEATHER"=1
+
+    # Sets the base time effects will last that WEATHER gives. Default 0 //no use
+    I:"Base time WEATHER"=20
+
+    # Sets the base amount of time (by default 1) WEATHER essentia gives you. Default 10
+    I:"Base uses WEATHER"=100
+
+    # Enable effect for WEATHER. Default: true
+    B:"Effect WEATHER"=true
+}
+
+
