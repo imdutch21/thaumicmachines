@@ -25,7 +25,7 @@ public class Research
     {
         ThaumicMachinesRecipes.Recipes();
 
-        ResearchCategories.registerCategory("ThaumicMachines", new ResourceLocation(References.MODID, "textures/blocks/essentiamachine_front.png"), background);
+        ResearchCategories.registerCategory("ThaumicMachines", new ResourceLocation(References.MODID, "textures/misc/Naamloos.png"), background);
         if (ConfigHandler.enableEssentiaVaporizer)
         {
             ResearchItem researchEssentiaVaporizer = new ResearchItem("EssentiaVaporizer", "ThaumicMachines", new AspectList().add(Aspect.MAGIC, 6).add(Aspect.FIRE, 3).add(Aspect.MECHANISM, 5).add(Aspect.EXCHANGE, 2), 3, 0, 2, new ItemStack(ModBlocks.essentiaMachine)).setPages(new ResearchPage("thaumicmachines_researchpage_essentiavaporizer"), new ResearchPage(ThaumicMachinesRecipes.recipeEssentiaVaporizer)).setParents("CRUCIBLE", "THAUMIUM").setSiblings("PowerUpgrade", "EfficiencyUpgrade", "RangeUpgrade");

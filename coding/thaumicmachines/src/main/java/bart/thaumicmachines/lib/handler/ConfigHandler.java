@@ -20,8 +20,10 @@ public class ConfigHandler
     public static boolean enablePowerUpgrade;
     public static boolean enableRangeUpgrade;
     public static boolean enableEfficiencyUpgrade;
+    public static boolean enableTimeUpgrade;
     public static double efficiencyUpgrade;
     public static double powerUpgrade;
+    public static double timeUpgrade;
     public static int rangeUpgrade;
     public static int baseRangeUpgrade;
 
@@ -378,28 +380,33 @@ public class ConfigHandler
         Property EssentiaMachine = configuration.get(".EssentiaVaporizer", "Enable Essentia Vaporizer", true);
         EssentiaMachine.comment = "Enable the crafting of the EssentiaVaporizer. Default: true";
         enableEssentiaVaporizer = EssentiaMachine.getBoolean();
-        Property EfficiencyUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading power", .25);
-        EfficiencyUpgrade.comment = "Set the amount each efficiency upgrade will add (.25 will add 1/4). Default: .25";
-        efficiencyUpgrade = EfficiencyUpgrade.getDouble();
         Property EnableEfficiencyUpgrade = configuration.get(".EssentiaVaporizer", "Enable upgrade", true);
         EnableEfficiencyUpgrade.comment = "Enable the crafting of the efficiency upgrade. Default: true";
         enableEfficiencyUpgrade = EnableEfficiencyUpgrade.getBoolean();
-        Property RangeUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading power", 2);
-        RangeUpgrade.comment = "Set the amount each range upgrade will add to the base range of effect. Default: 2";
-        rangeUpgrade = RangeUpgrade.getInt();
+        Property EfficiencyUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading efficiency", .25);
+        EfficiencyUpgrade.comment = "Set the amount each efficiency upgrade will add (.25 will add 1/4). Default: .25";
+        efficiencyUpgrade = EfficiencyUpgrade.getDouble();
         Property EnableRangeUpgrade = configuration.get(".EssentiaVaporizer", "Enable upgrade", true);
         EnableRangeUpgrade.comment = "Enable the crafting of the Ranger upgrade. Default: true";
         enableRangeUpgrade = EnableRangeUpgrade.getBoolean();
-        Property PowerUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading power", .5);
-        PowerUpgrade.comment = "Set the amount each power upgrade will add (.5 will add 1/2). Default: .5";
-        powerUpgrade = EfficiencyUpgrade.getDouble();
-        Property EnablePowerUpgrade = configuration.get(".EssentiaVaporizer", "Enable upgrade", true);
-        EnablePowerUpgrade.comment = "Enable the crafting of the Power upgrade. Default: true";
-        enablePowerUpgrade = EnablePowerUpgrade.getBoolean();
+        Property RangeUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading range", 2);
+        RangeUpgrade.comment = "Set the amount each range upgrade will add to the base range of effect. Default: 2";
+        rangeUpgrade = RangeUpgrade.getInt();
         Property BaseRange = configuration.get(".EssentiaVaporizer", "Base range", 5);
         BaseRange.comment = "This sets the base range of effect. Default 5";
         baseRangeUpgrade = BaseRange.getInt();
-
+        Property EnablePowerUpgrade = configuration.get(".EssentiaVaporizer", "Enable upgrade", true);
+        EnablePowerUpgrade.comment = "Enable the crafting of the Power upgrade. Default: true";
+        enablePowerUpgrade = EnablePowerUpgrade.getBoolean();
+        Property PowerUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading power", .5);
+        PowerUpgrade.comment = "Set the amount each power upgrade will add (.5 will add 1/2). Default: .5";
+        powerUpgrade = PowerUpgrade.getDouble();
+        Property EnableTimeUpgrade = configuration.get(".EssentiaVaporizer", "Enable Upgrade", true);
+        EnableTimeUpgrade.comment = "Enable the crafting of the Time upgrade. Default: true";
+        enableTimeUpgrade = EnableTimeUpgrade.getBoolean();
+        Property TimeUpgrade = configuration.get(".EssentiaVaporizer", "Upgrading time", .5);
+        PowerUpgrade.comment = "Set the amount each power upgrade will reduce (.5 will add 1/2). Default: .5";
+        powerUpgrade = PowerUpgrade.getDouble();
         //all the effect stuff
 
         //AIR

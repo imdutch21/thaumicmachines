@@ -23,7 +23,7 @@ import java.util.Random;
 public class BlockMachineUpgrade2 extends Block
 {
     public IIcon power;
-    public IIcon temp;
+    public IIcon time;
 
     public BlockMachineUpgrade2()
     {
@@ -241,7 +241,7 @@ public class BlockMachineUpgrade2 extends Block
     public void registerBlockIcons(IIconRegister iconRegister)
     {
         this.power = iconRegister.registerIcon(References.RESOURCESPREFIX + "upgradepower");
-        this.temp = iconRegister.registerIcon(References.RESOURCESPREFIX + "upgradepower");
+        this.time = iconRegister.registerIcon(References.RESOURCESPREFIX + "upgradepower");
     }
 
     @Override
@@ -252,7 +252,7 @@ public class BlockMachineUpgrade2 extends Block
         if (meta <= 5)
             return this.power;
         else
-            return this.temp;
+            return this.time;
     }
 
     @Override
@@ -261,6 +261,6 @@ public class BlockMachineUpgrade2 extends Block
         if (meta <= 5)
             return this.power;
         else
-            return this.temp;
+            return this.time;
     }
 }
