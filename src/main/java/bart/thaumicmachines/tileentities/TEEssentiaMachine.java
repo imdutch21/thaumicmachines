@@ -4,13 +4,12 @@ import bart.thaumicmachines.blocks.BlockMachineUpgrade;
 import bart.thaumicmachines.blocks.BlockMachineUpgrade2;
 import bart.thaumicmachines.lib.handler.ConfigHandler;
 import bart.thaumicmachines.potion.ModPotions;
-import bart.thaumicmachines.utils.EntityFinder;
+import bart.thaumicmachines.utils.ObjectFinder;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -20,8 +19,6 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectContainer;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static thaumcraft.api.aspects.Aspect.*;
@@ -269,7 +266,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionAIR()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectAIRRangeBoost, rangeUpgrade + ConfigHandler.effectAIRRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectAIRRangeBoost, rangeUpgrade + ConfigHandler.effectAIRRangeBoost);
         if (refresh == ConfigHandler.effectAIRRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -290,14 +287,14 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionWATER()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectWATERRangeBoost, rangeUpgrade + ConfigHandler.effectWATERRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectWATERRangeBoost, rangeUpgrade + ConfigHandler.effectWATERRangeBoost);
         if (refresh == ConfigHandler.effectWATERRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
             {
                 if (living != null)
                 {
-                    living.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), ConfigHandler.effectWATERTime, (int)(ConfigHandler.effectWATERBasePower * powerUpgrade), true));
+                    living.addPotionEffect(new PotionEffect(Potion.waterBreathing.getId(), ConfigHandler.effectWATERTime, (int) (ConfigHandler.effectWATERBasePower * powerUpgrade), true));
                     refresh = 0;
                     ticksTillRefresh--;
                 }
@@ -310,7 +307,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionFIRE()
     {
-        List<EntityLivingBase> entity = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectFIRERangeBoost, rangeUpgrade + ConfigHandler.effectFIRERangeBoost);
+        List<EntityLivingBase> entity = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectFIRERangeBoost, rangeUpgrade + ConfigHandler.effectFIRERangeBoost);
         if (refresh == ConfigHandler.effectFIRERefreshTime)
         {
             for (EntityLivingBase living : entity)
@@ -330,13 +327,13 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionENTROPY()
     {
-        List<EntityPlayer> entityPlayer = EntityFinder.getPlayersInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectENTROPYRangeBoost, rangeUpgrade + ConfigHandler.effectENTROPYRangeBoost);
+        List<EntityPlayer> entityPlayer = ObjectFinder.getPlayersInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectENTROPYRangeBoost, rangeUpgrade + ConfigHandler.effectENTROPYRangeBoost);
         if (refresh == ConfigHandler.effectENTROPYRefreshTime)
         {
             for (EntityPlayer living : entityPlayer)
             {
                 if(!living.capabilities.isCreativeMode)
-                living.addPotionEffect(new PotionEffect(ModPotions.entropy.getId(), ConfigHandler.effectENTROPYTime, (int)(ConfigHandler.effectENTROPYBasePower * powerUpgrade), true));
+                living.addPotionEffect(new PotionEffect(ModPotions.perditio.getId(), ConfigHandler.effectENTROPYTime, (int)(ConfigHandler.effectENTROPYBasePower * powerUpgrade), true));
                 refresh = 0;
                 ticksTillRefresh--;
             }
@@ -348,14 +345,14 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionWEATHER()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectWEATHERRangeBoost, rangeUpgrade + ConfigHandler.effectWEATHERRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectWEATHERRangeBoost, rangeUpgrade + ConfigHandler.effectWEATHERRangeBoost);
         if (refresh == ConfigHandler.effectWEATHERRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
             {
                 if (living != null)
                 {
-                    worldObj.addWeatherEffect(new EntityLightningBolt(worldObj, living.posX, living.posY , living.posZ));
+                    worldObj.addWeatherEffect(new EntityLightningBolt(worldObj, living.posX, living.posY, living.posZ));
                     refresh = 0;
                     ticksTillRefresh--;
                 }
@@ -368,7 +365,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionMOTION()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectMOTIONRangeBoost, rangeUpgrade + ConfigHandler.effectMOTIONRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectMOTIONRangeBoost, rangeUpgrade + ConfigHandler.effectMOTIONRangeBoost);
         if (refresh == ConfigHandler.effectMOTIONRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -389,7 +386,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionLIFE()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectLIFERangeBoost, rangeUpgrade + ConfigHandler.effectLIFERangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectLIFERangeBoost, rangeUpgrade + ConfigHandler.effectLIFERangeBoost);
         if (refresh == ConfigHandler.effectLIFERefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -409,7 +406,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionPOISON()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectPOISONRangeBoost, rangeUpgrade + ConfigHandler.effectPOISONRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectPOISONRangeBoost, rangeUpgrade + ConfigHandler.effectPOISONRangeBoost);
         if (refresh == ConfigHandler.effectPOISONRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -429,7 +426,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionENERGY()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectENERGYRangeBoost, rangeUpgrade + ConfigHandler.effectENERGYRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectENERGYRangeBoost, rangeUpgrade + ConfigHandler.effectENERGYRangeBoost);
         if (refresh == ConfigHandler.effectENERGYRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -450,7 +447,7 @@ public class TEEssentiaMachine extends TileEntity
     public void functionFLIGHT()
     {
 
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectFLIGHTRangeBoost, rangeUpgrade + ConfigHandler.effectFLIGHTRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectFLIGHTRangeBoost, rangeUpgrade + ConfigHandler.effectFLIGHTRangeBoost);
         if (refresh == ConfigHandler.effectFLIGHTRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -470,7 +467,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionDARKNESS()
     {
-        List<EntityPlayer> entityPlayer = EntityFinder.getPlayersInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectDARKNESSRangeBoost, rangeUpgrade + ConfigHandler.effectDARKNESSRangeBoost);
+        List<EntityPlayer> entityPlayer = ObjectFinder.getPlayersInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectDARKNESSRangeBoost, rangeUpgrade + ConfigHandler.effectDARKNESSRangeBoost);
         if (refresh == ConfigHandler.effectDARKNESSRefreshTime)
         {
             for (EntityPlayer living : entityPlayer)
@@ -490,7 +487,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionHEAL()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectHEALRangeBoost, rangeUpgrade + ConfigHandler.effectHEALRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectHEALRangeBoost, rangeUpgrade + ConfigHandler.effectHEALRangeBoost);
         if (refresh == ConfigHandler.effectHEALRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -510,7 +507,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionSLIME()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectSLIMERangeBoost, rangeUpgrade + ConfigHandler.effectSLIMERangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectSLIMERangeBoost, rangeUpgrade + ConfigHandler.effectSLIMERangeBoost);
         if (refresh == ConfigHandler.effectSLIMERefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -530,7 +527,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionTAINT()
     {
-        List<EntityPlayer> entityPlayer = EntityFinder.getPlayersInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade, rangeUpgrade);
+        List<EntityPlayer> entityPlayer = ObjectFinder.getPlayersInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade, rangeUpgrade);
         if (refresh == 20)
         {
             for (EntityPlayer living : entityPlayer)
@@ -550,7 +547,7 @@ public class TEEssentiaMachine extends TileEntity
 
     public void functionTRAP()
     {
-        List<EntityLivingBase> entityLiving = EntityFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectTRAPRangeBoost, rangeUpgrade + ConfigHandler.effectTRAPRangeBoost);
+        List<EntityLivingBase> entityLiving = ObjectFinder.getLivingEntitiesInRange(worldObj, xCoord, yCoord, zCoord, rangeUpgrade + ConfigHandler.effectTRAPRangeBoost, rangeUpgrade + ConfigHandler.effectTRAPRangeBoost);
         if (refresh == ConfigHandler.effectTRAPRefreshTime)
         {
             for (EntityLivingBase living : entityLiving)
@@ -567,4 +564,6 @@ public class TEEssentiaMachine extends TileEntity
             refresh++;
         }
     }
+
+
 }

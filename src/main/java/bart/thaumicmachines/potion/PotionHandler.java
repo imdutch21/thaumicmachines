@@ -1,19 +1,20 @@
 package bart.thaumicmachines.potion;
 
+import bart.thaumicmachines.utils.ActivatingBlocks;
+import bart.thaumicmachines.utils.ObjectFinder;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
+import net.minecraft.block.BlockButton;
+import net.minecraft.block.BlockLever;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -102,15 +103,15 @@ public class PotionHandler
 
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
-    public void onEntityUpdateEntropy(LivingEvent.LivingUpdateEvent living)
+    public void onEntityUpdatePerditio(LivingEvent.LivingUpdateEvent living)
     {
-        if(living.entity instanceof EntityPlayer && ((EntityPlayer) living.entity).isPotionActive(ModPotions.entropy))
+        if(living.entity instanceof EntityPlayerMP && ((EntityPlayerMP) living.entity).isPotionActive(ModPotions.perditio))
         {
-            if(!((EntityPlayer) living.entity).capabilities.isCreativeMode)
+            if(!((EntityPlayerMP) living.entity).capabilities.isCreativeMode)
             {
-                if(timer == 100)
+                if(timer >= 100)
                 {
-                    ItemStack[] inventory = ((EntityPlayer) living.entity).inventory.mainInventory;
+                    ItemStack[] inventory = ((EntityPlayerMP) living.entity).inventory.mainInventory;
 
                     ItemStack[] items = new ItemStack[9];
                     for(int i = 0; i < items.length; i++)
@@ -122,22 +123,23 @@ public class PotionHandler
 
                     for(int x = 0; x < items.length; x++)
                     {
-                        ((EntityPlayer) living.entity).inventory.mainInventory[x] = list.get(x);
+                        ((EntityPlayerMP) living.entity).inventory.mainInventory[x] = list.get(x);
                     }
-                    if(living.entityLiving.getActivePotionEffect(ModPotions.entropy).getDuration() == 0)
+                    if(living.entityLiving.getActivePotionEffect(ModPotions.perditio).getDuration() == 0)
                     {
-                        living.entityLiving.removePotionEffect(ModPotions.entropy.id);
+                        living.entityLiving.removePotionEffect(ModPotions.perditio.id);
                     }
-                }
+                    timer = 0;
+                } else
+                    timer++;
             }
-            else timer++;
         }
     }
 
     @SubscribeEvent(priority = EventPriority.NORMAL)
-    public void onEntityUpdateCold(LivingEvent.LivingUpdateEvent event)
+    public void onEntityUpdateGelum(LivingEvent.LivingUpdateEvent event)
     {
-        if(event.entityLiving != null && event.entityLiving.isPotionActive(ModPotions.cold))
+        if(event.entityLiving != null && event.entityLiving.isPotionActive(ModPotions.gelum))
         {
             EntityLivingBase living = event.entityLiving;
 
@@ -158,10 +160,50 @@ public class PotionHandler
                     living.worldObj.setBlock(x + direction.offsetX, y - 1 + direction.offsetY, z + direction.offsetZ, Blocks.ice);
                 }
             }
-            if(event.entityLiving.getActivePotionEffect(ModPotions.cold).getDuration() == 0)
+            if(event.entityLiving.getActivePotionEffect(ModPotions.gelum).getDuration() == 0)
             {
-                event.entityLiving.removePotionEffect(ModPotions.cold.id);
+                event.entityLiving.removePotionEffect(ModPotions.gelum.id);
             }
         }
     }
+
+    @SubscribeEvent(priority = EventPriority.NORMAL)
+    public void onEntityUpdateMachima(LivingEvent.LivingUpdateEvent event)
+    {
+        if(event.entityLiving != null && event.entityLiving.isPotionActive(ModPotions.machima))
+        {
+            if(timer >= 20)
+            {
+                EntityLivingBase living = event.entityLiving;
+                World world = living.worldObj;
+                int lowest = (int) living.posY - 5;
+                int highest = (int) living.posY + 5;
+                int xMin = (int) living.posX - 5;
+                int xMax = (int) living.posX + 5;
+                int zMin = (int) living.posZ - 5;
+                int zMax = (int) living.posZ + 5;
+
+                for(int y = lowest; y <= highest; y++)
+                {
+                    for(int x = xMin; x <= xMax; x++)
+                    {
+                        for(int z = zMin; z <= zMax; z++)
+                        {
+                            Block block = world.getBlock(x, y, z);
+                            if(block instanceof BlockLever)
+                            {
+                                ActivatingBlocks.ActivateLever(block, world, x, y, z);
+                            } else if(block instanceof BlockButton)
+                            {
+                                ActivatingBlocks.ActivateButton(block, world, x, y, z);
+                            }
+                        }
+                    }
+                }
+                timer = 0;
+            } else
+                timer++;
+        }
+    }
 }
+

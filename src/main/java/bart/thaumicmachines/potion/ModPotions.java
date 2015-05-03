@@ -20,8 +20,10 @@ public class ModPotions extends Potion
     public static Potion volatus;
     public static Potion limus;
     public static Potion vinculum;
-    public static Potion entropy;
-    public static Potion cold;
+    public static Potion perditio;
+    public static Potion gelum;
+    public static Potion machima;
+
     public ModPotions(String name, boolean badEffect, int color, int iconIndex)
     {
         super(findFreeID(), badEffect, color);
@@ -45,8 +47,9 @@ public class ModPotions extends Potion
         volatus = new PotionVolatus("volatus", false, 0xFFFFFF, 0);
         limus = new PotionLimus("limus", false, 0x01f800, 1);
         vinculum = new PotionVinculum("vinculum", false, 0x9a8080, 2);
-        entropy = new PotionEntropy("entropy", false, 0x000000, 3);
-        cold = new PotionCold("cold", false, 0xFFFFFF, 4);
+        perditio = new PotionPerditio("perditio", false, 0x000000, 3);
+        gelum = new PotionGalum("gelum", false, 0xFFFFFF, 4);
+        machima = new PotionMachima("machima", false, 0xFF0000, 5);
     }
 
     public static void extendPotionArray()

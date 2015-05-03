@@ -16,10 +16,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
-import thaumcraft.api.potions.PotionVisExhaust;
 
 /**
  * Created by imdutch21 on 11-2-15.
@@ -46,11 +44,12 @@ public class AddonMain
         System.out.println("ThaumicMachines PreInitialization");
         ModBlocks.init();
         ModPotions.init();
-        System.out.println("id for cold:" + ModPotions.cold.id);
-        System.out.println("id for entropy:" + ModPotions.entropy.id);
+        System.out.println("id for Gelum:" + ModPotions.gelum.id);
+        System.out.println("id for perditio:" + ModPotions.perditio.id);
         System.out.println("id for limus:" + ModPotions.limus.id);
         System.out.println("id for vinculum:" + ModPotions.vinculum.id);
         System.out.println("id for volatus:" + ModPotions.volatus.id);
+        System.out.println("id for machima:" + ModPotions.machima.id);
         ConfigHandler.Init(event.getSuggestedConfigurationFile());
 
 
