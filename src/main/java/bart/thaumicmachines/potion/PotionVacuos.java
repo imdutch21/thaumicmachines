@@ -1,0 +1,12 @@
+package bart.thaumicmachines.potion;
+
+/**
+ * Created by Bart on 3-5-2015.
+ */
+public class PotionVacuos extends ModPotions
+{
+    public PotionVacuos(String name, boolean badEffect, int color, int iconIndex)
+    {
+        super(name, badEffect, color, iconIndex);
+    }
+}

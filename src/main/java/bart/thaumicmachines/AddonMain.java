@@ -61,9 +61,8 @@ public class AddonMain
     {
         System.out.println("ThaumicMachines Initialization");
         proxy.registerTileEntities();
-
-
         MinecraftForge.EVENT_BUS.register(new PotionHandler());
+        proxy.registerRenderInformation();
     }
 
     @EventHandler

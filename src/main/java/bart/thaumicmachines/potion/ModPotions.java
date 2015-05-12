@@ -23,6 +23,7 @@ public class ModPotions extends Potion
     public static Potion perditio;
     public static Potion gelum;
     public static Potion machima;
+    public static Potion vacuos;
 
     public ModPotions(String name, boolean badEffect, int color, int iconIndex)
     {
@@ -50,6 +51,7 @@ public class ModPotions extends Potion
         perditio = new PotionPerditio("perditio", false, 0x000000, 3);
         gelum = new PotionGalum("gelum", false, 0xFFFFFF, 4);
         machima = new PotionMachima("machima", false, 0xFF0000, 5);
+        vacuos = new PotionVacuos("vacuos", false, 0x848080, 6);
     }
 
     public static void extendPotionArray()

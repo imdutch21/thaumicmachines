@@ -4,10 +4,7 @@ import bart.thaumicmachines.utils.ActivatingBlocks;
 import bart.thaumicmachines.utils.ObjectFinder;
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
-import net.minecraft.block.BlockButton;
-import net.minecraft.block.BlockLever;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -23,6 +20,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by imdutch21 on 15-2-15.
@@ -112,7 +110,6 @@ public class PotionHandler
                 if(timer >= 100)
                 {
                     ItemStack[] inventory = ((EntityPlayerMP) living.entity).inventory.mainInventory;
-
                     ItemStack[] items = new ItemStack[9];
                     for(int i = 0; i < items.length; i++)
                     {
@@ -172,7 +169,7 @@ public class PotionHandler
     {
         if(event.entityLiving != null && event.entityLiving.isPotionActive(ModPotions.machima))
         {
-            if(timer >= 20)
+            if(timer >= 40)
             {
                 EntityLivingBase living = event.entityLiving;
                 World world = living.worldObj;
@@ -203,6 +200,29 @@ public class PotionHandler
                 timer = 0;
             } else
                 timer++;
+        }
+    }
+
+    @SubscribeEvent(priority = EventPriority.NORMAL)
+    public void onEntityUpdateVacuos(LivingEvent.LivingUpdateEvent event)
+    {
+        if(event.entityLiving != null && event.entityLiving.isPotionActive(ModPotions.vacuos))
+        {
+            if(timer >= 20/event.entityLiving.getActivePotionEffect(ModPotions.vacuos).getAmplifier())
+            {
+                EntityLivingBase living = event.entityLiving;
+                Random x = new Random();
+                int xCoord = x.nextInt(11) + (int) living.posX - 5;
+                Random y = new Random();
+                int yCoord = y.nextInt(11) + (int) living.posY - 5;
+                Random z = new Random();
+                int zCoord = z.nextInt(11) + (int) living.posZ - 5;
+                if(living.worldObj.getBlock(xCoord, yCoord, zCoord) instanceof BlockStone || living.worldObj.getBlock(xCoord, yCoord, zCoord) instanceof BlockDirt)
+                {
+                    living.worldObj.setBlockToAir(xCoord, yCoord, zCoord);
+                }
+                timer = 0;
+            } else timer++;
         }
     }
 }

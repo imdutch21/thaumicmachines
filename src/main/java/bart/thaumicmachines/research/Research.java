@@ -46,5 +46,11 @@ public class Research
             ResearchItem researchEfficiencyUpgrade = new ResearchItem("EfficiencyUpgrade", "ThaumicMachines", new AspectList().add(Aspect.AIR, 5).add(Aspect.MAGIC, 3).add(Aspect.MECHANISM, 6), 7, -2, 1, new ItemStack(ModBlocks.machineUpgrade, 6)).setRound().setSecondary().setPages(new ResearchPage("thaumicmachines_researchpage_efficiencyupgrade"), new ResearchPage(ThaumicMachinesRecipes.recipeEfficiencyUpgrade)).setParents("EssentiaVaporizer", "UPGRADEAIR");
             ResearchCategories.addResearch(researchEfficiencyUpgrade);
         }
+
+    }
+
+    public ResourceLocation getResourceLocation(String aspect)
+    {
+        return new ResourceLocation("thaumcraft","textures/aspects/"+aspect.toLowerCase()+".png");
     }
 }

@@ -35,6 +35,7 @@ public class EssentiaMachine extends Block implements ITileEntityProvider
         this.setCreativeTab(AddonMain.getCreativeTab());
         this.setHardness(4f);
         this.setBlockName(References.MODID + ".essentiamachine");
+
     }
 
     @Override

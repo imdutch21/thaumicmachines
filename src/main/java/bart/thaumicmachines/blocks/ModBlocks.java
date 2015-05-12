@@ -11,6 +11,7 @@ public class ModBlocks
     public static Block essentiaMachine;
     public static Block machineUpgrade;
     public static Block machineUpgrade2;
+    public static Block test;
 
     public static void init()
     {
@@ -20,6 +21,8 @@ public class ModBlocks
         GameRegistry.registerBlock(machineUpgrade, BlockMachineUpgradeMeta.class, machineUpgrade.getUnlocalizedName());
         machineUpgrade2 = new BlockMachineUpgrade2().setBlockName("machineUpgrade2");
         GameRegistry.registerBlock(machineUpgrade2, BlockMachineUpgradeMeta2.class, machineUpgrade2.getUnlocalizedName());
+        test = new TestBlock();
+        GameRegistry.registerBlock(test, "testBlock");
     }
 
 }
