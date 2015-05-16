@@ -33,10 +33,9 @@ public class RendererTileEngine extends TileEntitySpecialRenderer
         GL11.glTranslated(x + 0.5F, y + 0.5F, z + 0.5F);
         Minecraft.getMinecraft().renderEngine.bindTexture(texture2);
         GL11.glTranslatef(-0.5F, -0.5F, -0.3F);
-        //TEEngine tile = (TEEngine)te;
-        //String color = Integer.toHexString(Aspect.WATER.getColor());
-        //GL11.glColor3f(HexToRGB.HexToRedF(color), HexToRGB.HexToBlueF(color), HexToRGB.HexToGreenF(color));
-        GL11.glColor3f(0.23539f, 0.831372f, 0.9882f);
+        TEEngine tile = (TEEngine)te;
+        String color = Integer.toHexString(tile.color);
+        GL11.glColor3f(HexToRGB.HexToRedF(color), HexToRGB.HexToBlueF(color), HexToRGB.HexToGreenF(color));
         model.renderTip();
         GL11.glPopMatrix();
     }

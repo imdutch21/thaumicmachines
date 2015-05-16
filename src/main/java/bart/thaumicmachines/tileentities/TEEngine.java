@@ -10,7 +10,7 @@ import thaumcraft.api.aspects.Aspect;
 public class TEEngine extends TileEntity
 {
     public Aspect currentAspect = null;
-    public int color = 0x3cd4fc/*(currentAspect != null? currentAspect.getColor():0xFFFFFF)*/;
+    public int color = (currentAspect != null? currentAspect.getColor():0x818181);
 
     @Override
     public void writeToNBT(NBTTagCompound nbt)

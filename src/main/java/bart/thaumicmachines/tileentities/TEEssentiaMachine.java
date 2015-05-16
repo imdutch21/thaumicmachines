@@ -6,11 +6,13 @@ import bart.thaumicmachines.lib.handler.ConfigHandler;
 import bart.thaumicmachines.potion.ModPotions;
 import bart.thaumicmachines.utils.HexToRGB;
 import bart.thaumicmachines.utils.ObjectFinder;
+import bart.thaumicmachines.utils.ParticleHelper;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
@@ -25,6 +27,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.aspects.IAspectContainer;
 
 import java.util.List;
+import java.util.Random;
 
 import static thaumcraft.api.aspects.Aspect.*;
 
@@ -36,6 +39,7 @@ public class TEEssentiaMachine extends TileEntity
     public Aspect jarAspectType = null;
     public Boolean isJarWithAspect = false;
     public Aspect currentAspect = null;
+    public int color = 0xFFFFFF;
     public int ticksTillRefresh = 0;
     public int refresh = 0;
     public int facing;
@@ -109,6 +113,7 @@ public class TEEssentiaMachine extends TileEntity
                     tileJar.takeFromContainer(jarAspectType, 0);
                     currentAspect = jarAspectType;
                     ticksTillRefresh = amount;
+                    color = currentAspect.getColor();
                 }
             } else
             {
@@ -133,6 +138,7 @@ public class TEEssentiaMachine extends TileEntity
             nbt.setInteger("refresh", refresh);
         if(currentAspect.getName() != null)
             nbt.setString("aspect", currentAspect.getName());
+        nbt.setInteger("color", color);
     }
 
     @Override
@@ -146,6 +152,7 @@ public class TEEssentiaMachine extends TileEntity
             refresh = nbt.getInteger("refresh");
         if(nbt.getString("aspect") != null)
             currentAspect = Aspect.getAspect(nbt.getString("aspect"));
+        color = nbt.getInteger("color");
     }
 
     public void upgradeCalculator()
@@ -258,27 +265,28 @@ public class TEEssentiaMachine extends TileEntity
         {
             worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
             isWorking = true;
-            int color = currentAspect.getColor();
             if(this.facing == 2 || this.facing == 3)
             {
-                EntityFX particle1 = new EntityFX(worldObj, xCoord + 2 - Math.random(), yCoord + .2, zCoord + Math.random(), 0.0, Math.random() - .5, 0.0);
-                EntityFX particle2 = new EntityFX(worldObj, xCoord - 2 + Math.random(), yCoord + .2, zCoord + Math.random(), 0.0, Math.random() - .5, 0.0);
-                particle1.setRBGColorF(HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)));
-                particle2.setRBGColorF(HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)));
-                particle1.setParticleTextureIndex(133);
-                particle2.setParticleTextureIndex(133);
-                FMLClientHandler.instance().getClient().effectRenderer.addEffect(particle1);
-                FMLClientHandler.instance().getClient().effectRenderer.addEffect(particle2);
+                double x1 = xCoord + 2 - Math.random();
+                double y1 = yCoord + .2;
+                double z1 = zCoord + Math.random();
+                double x2 = xCoord - 1 + Math.random();
+                double y2 = yCoord + .2;
+                double z2 = zCoord + Math.random();
+
+                ParticleHelper.spawnParticle(worldObj, x1, y1, z1, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
+                ParticleHelper.spawnParticle(worldObj, x2, y2, z2, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
             } else
             {
-                EntityFX particle1 = new EntityFX(worldObj, xCoord + Math.random(), yCoord + .2, zCoord + 2 - Math.random(), 0.0, Math.random() - .5, 0.0);
-                EntityFX particle2 = new EntityFX(worldObj, xCoord + Math.random(), yCoord + .2, zCoord - 1 + Math.random(), 0.0, Math.random() - .5, 0.0);
-                particle1.setRBGColorF(HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)));
-                particle2.setRBGColorF(HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)));
-                particle1.setParticleTextureIndex(133);
-                particle2.setParticleTextureIndex(133);
-                FMLClientHandler.instance().getClient().effectRenderer.addEffect(particle1);
-                FMLClientHandler.instance().getClient().effectRenderer.addEffect(particle2);
+                double x1 = xCoord + Math.random();
+                double y1 = yCoord + .2;
+                double z1 = zCoord + 2 - Math.random();
+                double x2 = xCoord + Math.random();
+                double y2 = xCoord +  yCoord + .2;
+                double z2 = zCoord - 1 + Math.random();
+
+                ParticleHelper.spawnParticle(worldObj, x1, y1, z1, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
+                ParticleHelper.spawnParticle(worldObj, x2, y2, z2, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
             }
         } else
         {

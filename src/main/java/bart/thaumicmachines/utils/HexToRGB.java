@@ -25,17 +25,20 @@ public class HexToRGB
 
     public static float HexToRedF(String hex)
     {
-        Color color = Color.decode(hex);
+        String newHax = "0x" + hex;
+        Color color = Color.decode(newHax);
         return color.getRed()/255f;
     }
     public static float HexToGreenF(String hex)
     {
-        Color color = Color.decode(hex);
+        String newHax = "0x" + hex;
+        Color color = Color.decode(newHax);
         return color.getGreen()/255f;
     }
     public static float HexToBlueF(String hex)
     {
-        Color color = Color.decode(hex);
+        String newHax = "0x" + hex;
+        Color color = Color.decode(newHax);
         return color.getBlue()/255f;
     }
 }

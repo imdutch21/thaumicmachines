@@ -3,11 +3,14 @@ package bart.thaumicmachines.blocks;
 import bart.thaumicmachines.AddonMain;
 import bart.thaumicmachines.lib.References;
 import bart.thaumicmachines.tileentities.TEEngine;
+import bart.thaumicmachines.utils.HexToRGB;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+import thaumcraft.api.aspects.Aspect;
 
 /**
  * Created by Bart on 11-5-2015.
@@ -23,23 +26,6 @@ public class TestBlock extends Block implements ITileEntityProvider
     }
 
 
-    /*@SideOnly(Side.CLIENT)
-    public int getRenderColor(int p_149741_1_)
-    {
-        return 0x3cd4fc;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public int getBlockColor()
-    {
-        return 0x3cd4fc;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public int colorMultiplier(IBlockAccess p_149720_1_, int p_149720_2_, int p_149720_3_, int p_149720_4_)
-    {
-        return 0x3cd4fc;
-    }*/
 
     @Override
     public int getRenderType() {
@@ -62,6 +48,11 @@ public class TestBlock extends Block implements ITileEntityProvider
         return new TEEngine();
     }
 
-
+    @Override
+    public boolean onBlockActivated(World p_149727_1_, int p_149727_2_, int p_149727_3_, int p_149727_4_, EntityPlayer p_149727_5_, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
+    {
+        System.out.println(HexToRGB.HexToRedF(Integer.toHexString(Aspect.AIR.getColor())) + "," + HexToRGB.HexToBlueF(Integer.toHexString(Aspect.AIR.getColor())) + "," +  HexToRGB.HexToGreenF(Integer.toHexString(Aspect.AIR.getColor())));
+        return true;
+    }
 }
 
