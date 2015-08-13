@@ -5,6 +5,8 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
 
 import java.util.Random;
@@ -15,9 +17,9 @@ import java.util.Random;
 public class ParticleHelper
 {
     @SideOnly(Side.CLIENT)
-    public static void spawnParticle(World world, double x, double y, double z, double motionX, double motionY, double motionZ, float red, float green, float blue, int index)
+    public static void spawnParticle(World world, double x, double y, double z, float red, float green, float blue, int index)
     {
-        EntityFX particle = new EntityFX(world, x, y, z, motionX, motionY, motionZ);
+        EntityFX particle = new EntityFX(world, x, y, z, 0.0D, 0.0D, 0.0D);
 
         particle.setRBGColorF(red, green, blue);
         particle.setParticleTextureIndex(index);

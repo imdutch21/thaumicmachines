@@ -136,7 +136,7 @@ public class TEEssentiaMachine extends TileEntity
             nbt.setInteger("tilrefresh", ticksTillRefresh);
         if(refresh > 0)
             nbt.setInteger("refresh", refresh);
-        if(currentAspect.getName() != null)
+        if(currentAspect != null)
             nbt.setString("aspect", currentAspect.getName());
         nbt.setInteger("color", color);
     }
@@ -270,23 +270,25 @@ public class TEEssentiaMachine extends TileEntity
                 double x1 = xCoord + 2 - Math.random();
                 double y1 = yCoord + .2;
                 double z1 = zCoord + Math.random();
+
                 double x2 = xCoord - 1 + Math.random();
                 double y2 = yCoord + .2;
                 double z2 = zCoord + Math.random();
 
-                ParticleHelper.spawnParticle(worldObj, x1, y1, z1, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
-                ParticleHelper.spawnParticle(worldObj, x2, y2, z2, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
+                ParticleHelper.spawnParticle(worldObj, x1, y1, z1, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
+                ParticleHelper.spawnParticle(worldObj, x2, y2, z2, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
             } else
             {
                 double x1 = xCoord + Math.random();
                 double y1 = yCoord + .2;
                 double z1 = zCoord + 2 - Math.random();
+
                 double x2 = xCoord + Math.random();
-                double y2 = xCoord +  yCoord + .2;
+                double y2 = yCoord + .2;
                 double z2 = zCoord - 1 + Math.random();
 
-                ParticleHelper.spawnParticle(worldObj, x1, y1, z1, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
-                ParticleHelper.spawnParticle(worldObj, x2, y2, z2, 0.0, Math.random() - .5, 0.0, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
+                ParticleHelper.spawnParticle(worldObj, x1, y1, z1, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
+                ParticleHelper.spawnParticle(worldObj, x2, y2, z2, HexToRGB.HexToRedF(Integer.toHexString(color)), HexToRGB.HexToGreenF(Integer.toHexString(color)), HexToRGB.HexToBlueF(Integer.toHexString(color)), 133);
             }
         } else
         {
